@@ -22,7 +22,7 @@ It combines:
 
 ## ⚙️ Environment variables
 
-Create **`.env`** in the repo root (loaded automatically by `python-dotenv`) and add these fields:
+Create **`.env`** in the repo app folder and add these fields (loaded automatically by `python-dotenv`):
 
 ```dotenv
 # Document Intelligence
@@ -43,21 +43,29 @@ AZURE_OPENAI_API_VERSION=2024-02-15-preview
 
 ```bash
 # 1 · Clone
-git clone https://github.com/<your-org>/medical-chatbot.git
-cd medical-chatbot
+Health-Maintenance-Organization-ChatBotgit clone https://github.com/LiorMish/Health-Maintenance-Organization-ChatBot.git
+cd Health-Maintenance-Organization-ChatBot
 
-# 2 · Create Python 3.10 venv
-python -m venv .venv
+# 2.1 Optional - If you're on a system without direct package manager access:
+conda create -n chatbot python=3.10 -y
+conda activate chatbot
+
+# 2.2 · Create Python 3.10 venv
+python3.10 -m venv .venv
 source .venv/bin/activate
 
 # 3 · Install deps
 pip install -r requirements.txt
 
 # 4 · Supply API keys
-cp .env.example .env           # edit OPENAI_API_KEY / AZURE_* keys
+cp .env.example .env           # copy the env file you created into this directory
+```
 
+Now launch back-end and front-end in different terminals.
+```bash
 # 5 · Launch back-end
-python api/main.py                 # http://localhost:8000  (hot-reloading: uvicorn main:app --reload)
+python app/main.py                 # http://localhost:8000  (hot-reloading: uvicorn main:app --reload)
 
-# 6 · Launch front-end (new terminal)
-streamlit run frontend/ui.py            # http://localhost:8501
+# 6 · Launch front-end (new terminal) (cd Health-Maintenance-Organization-ChatBot)
+streamlit run frontend/ui.py # --server.address 0.0.0.0 --server.port 8501
+```
