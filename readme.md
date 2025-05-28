@@ -43,7 +43,7 @@ AZURE_OPENAI_API_VERSION=2024-02-15-preview
 
 ```bash
 # 1 · Clone
-Health-Maintenance-Organization-ChatBotgit clone https://github.com/LiorMish/Health-Maintenance-Organization-ChatBot.git
+git clone https://github.com/LiorMish/Health-Maintenance-Organization-ChatBot.git
 cd Health-Maintenance-Organization-ChatBot
 
 # 2.1 Optional - If you're on a system without direct package manager access:
@@ -58,7 +58,7 @@ source .venv/bin/activate
 pip install -r requirements.txt
 
 # 4 · Supply API keys
-cp .env.example .env           # copy the env file you created into this directory
+cp .env.example .env  # copy the env file you created into Health-Maintenance-Organization-ChatBot directory
 ```
 
 Now launch back-end and front-end in different terminals.
