@@ -67,5 +67,6 @@ Now launch back-end and front-end in different terminals.
 python app/main.py                 # http://localhost:8000  (hot-reloading: uvicorn main:app --reload)
 
 # 6 · Launch front-end (new terminal) (cd Health-Maintenance-Organization-ChatBot)
-streamlit run frontend/ui.py # --server.address 0.0.0.0 --server.port 8501
+streamlit run frontend/ui.py
+# remote VM?  add:  --server.address 0.0.0.0 --server.port 8501
 ```
