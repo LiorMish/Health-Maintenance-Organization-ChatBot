@@ -1,0 +1,12 @@
+fastapi[all]==0.110.2
+uvicorn==0.30.0
+openai==1.24.0
+python-dotenv
+streamlit==1.34.0
+bs4==0.0.2
+html5lib
+beautifulsoup4
+requests
+httpx<0.24.0
+numpy>=1.24
+langdetect==1.0.9
